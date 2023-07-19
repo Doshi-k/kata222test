@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<table class="table">
+    <thead>
+    <tr style="text-align: center; vertical-align: middle">
+        <th scope="col">Model</th>
+        <th scope="col">Colour</th>
+        <th scope="col">Series</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr style="text-align: center; vertical-align: middle" th:each="car: ${cars}">
+        <td th:text="${car.getModel()}"/>
+        <td th:text="${car.getColour()}"/>
+        <td th:text="${car.getSeries()}"/>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>
